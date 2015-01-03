@@ -16,5 +16,11 @@ var options = {
 
 https.createServer(options, function (req, res) {
     res.writeHead(200);
+
+    proxy_options = {
+        hostname: 'www.facebook.com',
+        path: "/",
+        method: "GET"
+    }
     res.end("Hello world!")
 }).listen(443);
